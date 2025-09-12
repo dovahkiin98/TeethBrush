@@ -28,7 +28,7 @@ fun MainUI(
         composable("settings") {
             SettingUI(
                 onSubmit = {
-                    navController.popBackStack()
+                    navController.navigateUp()
                 },
             )
         }
