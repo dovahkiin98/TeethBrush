@@ -41,8 +41,6 @@ fun TimerUI(
 ) {
     val duration by mainViewModel.durationFlow.collectAsStateWithLifecycle()
 
-    println(duration)
-
     if (duration != null) {
         TimerUI(
             duration = duration!!,
