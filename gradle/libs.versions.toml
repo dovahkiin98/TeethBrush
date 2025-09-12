@@ -2,27 +2,28 @@
 gradle = "8.13.0"
 #gradle = "9.0.0-alpha04"
 
-kotlin = "2.2.20-RC"
+kotlin = "2.2.20"
 coRoutines = "1.10.2"
 serialization = "1.9.0"
 
 core = "1.17.0"
 coreSplashscreen = "1.2.0-rc01"
 appCompat = "1.7.1"
-activity = "1.12.0-alpha07"
+activity = "1.12.0-alpha08"
 lifecycle = "2.10.0-alpha03"
-navigation = "2.9.3"
+navigation = "2.9.4"
+navigation3 = "1.0.0-alpha09"
 datastore = "1.2.0-alpha02"
 
 wear = "1.4.0-alpha02"
-wear-input = "1.2.0-rc01"
+wear-input = "1.2.0"
 wear-tiles = "1.5.0"
 
-compose = "1.10.0-alpha02"
-compose-wear = "1.5.0"
+compose = "1.10.0-alpha03"
+compose-wear = "1.6.0-alpha01"
 
 hilt = "2.57.1"
-androidx-hilt = "1.3.0-rc01"
+androidx-hilt = "1.3.0"
 
 [libraries]
 kotlin-std = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
@@ -42,9 +43,13 @@ androidx-datastore-preferences = { module = "androidx.datastore:datastore-prefer
 
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigation" }
 
+androidx-lifecycle-viewmodel-navigation3 = { module = "androidx.lifecycle:lifecycle-viewmodel-navigation3", version.ref = "lifecycle" }
+androidx-navigation3-runtime = { module = "androidx.navigation3:navigation3-runtime", version.ref = "navigation3" }
+androidx-navigation3-ui = { module = "androidx.navigation3:navigation3-ui", version.ref = "navigation3" }
+
 androidx-wear = { module = "androidx.wear:wear", version.ref = "wear" }
 androidx-wear-input = { module = "androidx.wear:wear-input", version.ref = "wear-input" }
-androidx-wear-ongoing = "androidx.wear:wear-ongoing:1.1.0-rc01"
+androidx-wear-ongoing = "androidx.wear:wear-ongoing:1.1.0"
 androidx-wear-phone-interactions = "androidx.wear:wear-phone-interactions:1.1.0"
 androidx-wear-remote-interactions = "androidx.wear:wear-remote-interactions:1.1.0"
 
@@ -91,7 +96,7 @@ android-application = { id = "com.android.application", version.ref = "gradle" }
 kotlin-gradle = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
-ksp = { id = "com.google.devtools.ksp", version = "2.2.10-2.0.2" }
+ksp = { id = "com.google.devtools.ksp", version = "2.2.20-2.0.2" }
 firebase-crashlytics = { id = "com.google.firebase.crashlytics", version = "3.0.6" }
 google-services = { id = "com.google.gms.google-services", version = "4.4.3" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
