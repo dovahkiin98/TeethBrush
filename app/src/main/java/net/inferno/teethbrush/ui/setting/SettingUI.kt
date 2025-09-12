@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
@@ -29,13 +30,19 @@ fun SettingUI(
     onSubmit: () -> Unit,
 ) {
     val duration by mainViewModel.durationFlow.collectAsStateWithLifecycle()
+    val durationSaved by mainViewModel.durationSavedFlow.collectAsStateWithLifecycle(false)
+
+    LaunchedEffect(durationSaved) {
+        if(durationSaved) {
+            onSubmit()
+        }
+    }
 
     if (duration != null) {
         SettingUI(
             startValue = duration!!,
             onSubmit = {
                 mainViewModel.setDuration(it)
-                onSubmit()
             },
             modifier = Modifier,
         )

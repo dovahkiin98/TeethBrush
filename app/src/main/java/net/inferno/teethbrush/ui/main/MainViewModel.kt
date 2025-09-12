@@ -3,7 +3,9 @@ package net.inferno.teethbrush.ui.main
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -19,9 +21,13 @@ class MainViewModel @Inject constructor(
             null,
         )
 
+    private val _durationSavedFlow = MutableSharedFlow<Boolean>()
+    val durationSavedFlow = _durationSavedFlow.asSharedFlow()
+
     fun setDuration(duration: Int) {
         viewModelScope.launch {
             settingsDataStore.setDuration(duration)
+            _durationSavedFlow.emit(true)
         }
     }
 }
