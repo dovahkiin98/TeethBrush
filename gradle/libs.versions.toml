@@ -1,29 +1,28 @@
 [versions]
-gradle = "8.13.0"
-#gradle = "9.0.0-alpha07"
+gradle = "9.2.1"
 
-kotlin = "2.2.20"
-coRoutines = "1.10.2"
-serialization = "1.9.0"
+kotlin = "2.3.0"
+coRoutines = "1.11.0"
+serialization = "1.11.0"
 
-core = "1.17.0"
-coreSplashscreen = "1.2.0-rc01"
+core = "1.19.0"
+coreSplashscreen = "1.2.0"
 appCompat = "1.7.1"
-activity = "1.12.0-alpha09"
-lifecycle = "2.10.0-alpha04"
-navigation = "2.9.5"
-navigation3 = "1.0.0-alpha10"
-datastore = "1.2.0-alpha02"
+activity = "1.13.0"
+lifecycle = "2.11.0-rc01"
+navigation = "2.10.0-alpha05"
+navigation3 = "1.2.0-alpha04"
+datastore = "1.3.0-alpha09"
 
-wear = "1.4.0-alpha02"
+wear = "1.4.0"
 wear-input = "1.2.0"
-wear-tiles = "1.5.0"
+wear-tiles = "1.6.0"
 
-compose = "1.10.0-alpha04"
-compose-wear = "1.6.0-alpha02"
+compose = "1.12.0-alpha03"
+compose-wear = "1.7.0-alpha04"
 
-hilt = "2.57.2"
-androidx-hilt = "1.3.0"
+hilt = "2.59.2"
+androidx-hilt = "1.4.0-rc01"
 
 [libraries]
 kotlin-std = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
@@ -51,7 +50,7 @@ androidx-wear = { module = "androidx.wear:wear", version.ref = "wear" }
 androidx-wear-input = { module = "androidx.wear:wear-input", version.ref = "wear-input" }
 androidx-wear-ongoing = "androidx.wear:wear-ongoing:1.1.0"
 androidx-wear-phone-interactions = "androidx.wear:wear-phone-interactions:1.1.0"
-androidx-wear-remote-interactions = "androidx.wear:wear-remote-interactions:1.1.0"
+androidx-wear-remote-interactions = "androidx.wear:wear-remote-interactions:1.2.0"
 
 androidx-wear-tiles = { module = "androidx.wear.tiles:tiles", version.ref = "wear-tiles" }
 androidx-wear-tiles-renderer = { module = "androidx.wear.tiles:tiles-renderer", version.ref = "wear-tiles" }
@@ -70,9 +69,9 @@ androidx-wear-compose-material3 = { module = "androidx.wear.compose:compose-mate
 androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
 
 google-wearable = "com.google.android.wearable:wearable:2.9.0"
-google-play-services-wearable = "com.google.android.gms:play-services-wearable:19.0.0"
+google-play-services-wearable = "com.google.android.gms:play-services-wearable:20.0.1"
 
-coil-compose = "io.coil-kt:coil-compose:3.3.0"
+coil-compose = "io.coil-kt:coil-compose:3.4.0"
 
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
@@ -96,7 +95,7 @@ android-application = { id = "com.android.application", version.ref = "gradle" }
 kotlin-gradle = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
-ksp = { id = "com.google.devtools.ksp", version = "2.2.20-2.0.3" }
-firebase-crashlytics = { id = "com.google.firebase.crashlytics", version = "3.0.6" }
-google-services = { id = "com.google.gms.google-services", version = "4.4.3" }
+ksp = { id = "com.google.devtools.ksp", version = "2.3.9" }
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version = "3.0.7" }
+google-services = { id = "com.google.gms.google-services", version = "4.4.4" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
