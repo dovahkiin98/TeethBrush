@@ -12,6 +12,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.intl.Locale
 import androidx.compose.ui.unit.sp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
@@ -92,6 +93,7 @@ private fun SettingUI(
                     "%02d:%02d", minutes, seconds,
                 ),
                 fontSize = 48.sp,
+                fontFamily = FontFamily.Monospace,
             )
 
             Box(
